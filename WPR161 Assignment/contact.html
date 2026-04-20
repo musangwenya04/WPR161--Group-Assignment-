@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Fest | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="leaf fall"></div>
+  <div class="leaf fall"></div>
+  <div class="leaf fall"></div>
+  <div class="leaf fall"></div>
+  <div class="leaf fall"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="details.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Contact & Register</h1>
+    <h4>Join us or ask us anything!</h4>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>Reach Out</h2>
+      <p>Fill in the form to register or send us your inquiries.</p>
+      <p> We'd love to hear from you!</p>
+
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <input type="text" name="surname" placeholder="Your Surname" required><br><br>
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        <input type="tel" number="number" placeholder="Phone Number" required><br><br>
+        <input type="Number" number="number" placeholder="People attending" required><br><br>
+        <fieldset style="width:150px;margin:auto;border:2px solid white">
+        <legend>Gender</legend>
+        <input type="radio" name="Gender" value="Male">Male<br>
+        <input type="radio" name="Gender" value="Female">Female<br>
+        </fieldset>
+        <p></p>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      <p>If you have any inquiries please Email us </p>
+      <p>Greenfest@gmail.com</p>
+
+      <h3>Follow Us</h3>
+      <p>We're on <a href="https://instagram.com/greenfest2025" class="link" target="_blank">Instagram</a>! Stay updated with our posts, stories, and</p>
+      <p> behind the scenes action.</p>
+
+      <h3>Countdown to Event:</h3>
+      <p id="countdown"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="trees">
+      <div class="tree"></div><div class="tree"></div><div class="tree"></div>
+    </div>
+    <p>&copy; 2025 Green Fest | <a href="https://instagram.com/greenfest2025" class="link" target="_blank">Instagram</a></p>
+  </footer>
+
+  <script>
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date("April 26, 2025 10:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+</body>
+</html>
+
