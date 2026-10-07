@@ -1,5 +1,4 @@
- About the Project
-The was to create a website to promote and market a community event 
+The project  was to create a website to promote and market a community event 
 
 This project was created as part of our WPR161 Web Programming group assignment at Belgium Campus.
 
